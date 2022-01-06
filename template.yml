@@ -1,4 +1,4 @@
-# Exercise - Rollback
+# Exercise - Rollbackw
 AWSTemplateFormatVersion: 2010-09-09
 Description: ND9991 C3 L4 
 Resources:
@@ -9,8 +9,6 @@ Resources:
         - !Ref InstanceSecurityGroup
       # Change this, as applicable to you      
       KeyName: AWS_EC2_Demo.pem
-      # Change this, as applicable to you
-      # You may need to find out what instance types are available in your region - use https://cloud-images.ubuntu.com/locator/ec2/
       ImageId: 'ami-0b49a4a6e8e22fa16' 
       InstanceType: t3.micro
   InstanceSecurityGroup:
