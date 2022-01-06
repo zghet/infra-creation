@@ -15,7 +15,7 @@ jobs:
         - run: #echo "hello world"  run the `echo` command
             name: Create Cloudformation Stack
             command:
-              aws cloudformation --stack-name InfraCreation  deploy \
+              aws cloudformation   deploy --stack-name InfraCreation \
                 --template-file template.yml
                 --region us-east-1
 # Sequential workflow
