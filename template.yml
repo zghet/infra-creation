@@ -9,7 +9,7 @@ Resources:
         - !Ref InstanceSecurityGroup
       # Change this, as applicable to you      
       KeyName: AWS_EC2_Demo.pem
-      ImageId: 'ami-0b49a4a6e8e22fa16' 
+      ImageId: 'ami-039da1612f6f41296 ' 
       InstanceType: t3.micro
   InstanceSecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
@@ -19,4 +19,4 @@ Resources:
         - IpProtocol: tcp
           FromPort: '22'
           ToPort: '22'
-          CidrIp: 189.183.88.133/32 
+          CidrIp: 201.111.215.238/32 
