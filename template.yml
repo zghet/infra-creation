@@ -7,7 +7,7 @@ Resources:
     Properties:
       SecurityGroups:
         - !Ref InstanceSecurityGroup
-      # Change this, as applicable to you      
+      # Change this, as applicable to you  a
       KeyName: AWS-Infra-Creation.pem
       ImageId: 'ami-01f87c43e618bf8f0' 
       InstanceType: t3.micro
