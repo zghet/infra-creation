@@ -9,7 +9,7 @@ Resources:
         - !Ref InstanceSecurityGroup
       # Change this, as applicable to you      
       KeyName: AWS_EC2_Demo.pem
-      ImageId: 'ami-039da1612f6f41296' 
+      ImageId: 'ami-01f87c43e618bf8f0' 
       InstanceType: t3.micro
   InstanceSecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
