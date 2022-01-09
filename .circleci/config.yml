@@ -33,7 +33,7 @@ jobs:
       - run:
           name: Run Playbook and Configure server
           command: |
-            ansible-playbook -i inventory template.yml
+            ansible-playbook -i inventory install-ansible.yml
 
 
 
