@@ -31,10 +31,6 @@ jobs:
           command: |
             apk add --update ansible
       - run:
-          name: Install Ansible
-          command: |
-            # Install Ansible
-      - run:
           name: Run Playbook and Configure server
           command: |
             ansible-playbook -i inventory template.yml
