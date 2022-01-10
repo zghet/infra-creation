@@ -9,6 +9,8 @@ orbs:
 commands:
   #Excercse - Rollback
   destroy_environment:
+    docker:
+    - image: amazon/aws-cli
     steps:
     - run:
         name: Destroy environment
@@ -33,7 +35,7 @@ jobs:
                --template-file create-server.yml \
                --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5} \
                --region us-west-1
-        - run: return 1
+        #- run: return 1
         - destroy_environment
 
 # Exercise: Config and Deployment
@@ -59,18 +61,18 @@ jobs:
     docker:
       - image: alpine:latest 
     steps:
-      - run: apk add --update curl
+      #- run: apk add --update curl
       - run:
           name: smoke test
-          command: |
-             URL="https://blog.udacity3.c3om/"
-             # Test if website exists
-             if curl -s --head ${URL} 
-             then
-               return 0
-             else
-               return 1
-             fi
+          command: return 1
+             #URL="https://blog.udacity3.c3om/"
+             ## Test if website exists
+             #if curl -s --head ${URL} 
+             #then
+             #  return 0
+             #else
+             #  return 1
+             #fi
       - destroy_environment
 
 # Sequential workflow
@@ -80,4 +82,4 @@ workflows:
     jobs:
       - create_infrastructure
       #- configure_infrastructure
-      #- smoke_test
+      - smoke_test
