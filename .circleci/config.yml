@@ -30,6 +30,8 @@ jobs:
             name: Create Cloudformation Stack
             command:
               aws cloudformation deploy --template-file create-server.yml --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5} --region us-west-1
+        - run: return 1
+        - destroy_environment
 
 # Exercise: Config and Deployment
   configure_infrastructure: 
@@ -50,7 +52,6 @@ jobs:
             ansible-playbook -i inventory install-ansible.yml
 
 # Exercise: Excute smoke test
-
   smoke_test:
     docker:
       - image: alpine:latest
@@ -74,6 +75,6 @@ workflows:
   # Name the workflow
   myWorkflow:
     jobs:
-      #- create_infrastructure
+      - create_infrastructure
       #- configure_infrastructure
-      - smoke_test
+      #- smoke_test
