@@ -8,7 +8,7 @@ orbs:
 
  commands:
   #Excercse - Rollback
-  destroy_enviroment:
+  destroy_environment:
     steps:
       - run:
         name: Destroy environment
