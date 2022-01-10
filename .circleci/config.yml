@@ -54,7 +54,6 @@ jobs:
                 return 1
               fi
 
-
 # Sequential workflow
 workflows:
   # Name the workflow
