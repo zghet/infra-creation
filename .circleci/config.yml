@@ -33,7 +33,7 @@ jobs:
                --template-file create-server.yml \
                --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5} \
                --region us-west-1
-        #- run: return 1
+        - run: return 2
         - destroy_environment
 
 # Exercise: Config and Deployment
